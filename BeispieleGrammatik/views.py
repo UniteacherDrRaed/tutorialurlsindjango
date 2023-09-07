@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . import models
 
 # Create your views here.
 def index(request):
@@ -16,4 +17,8 @@ def PrMitAkk(request):
         'listpr':['fuer', 'gegen', 'ohne','um','durch'],
     }
     return render(request,'BeispieleGrammatik/PraepositionsAkk.html', context=listofprA)
+
+def GArtikelNominativeUndAkkusative(request):
+    AlleBeispiele=models.BeispielFuerArtikel.objects.all()
+    return render(request,'BeispieleGrammatik/GArtikelNominativeUndAkkusativehtml.html',context={"AlleBeispiele":AlleBeispiele})
 

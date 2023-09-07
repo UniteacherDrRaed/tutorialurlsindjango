@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('dative', views.PrMitDative, name='dative'),
     path('akk', views.PrMitAkk, name ='akk'),
+    path('Artikel', views.GArtikelNominativeUndAkkusative, name ='Artikel'),
 ]
